@@ -1,0 +1,207 @@
+{
+  "user": [
+    {
+      "user": "12333",
+      "email": "sondzk58@gmail.com",
+      "name": "truongtu1122",
+      "phone": "1234567890",
+      "local": "thái nguyên",
+      "pass": "Abc1234@",
+      "confirmPass": "Abc1234@",
+      "role": "user",
+      "isLoggedIn": true,
+      "id": 1
+    },
+    {
+      "user": "ngns",
+      "email": "sondzk58@gmail.com",
+      "name": "ngns",
+      "phone": "1233456788",
+      "local": "thái nguyên ",
+      "pass": "Ngns2002@",
+      "confirmPass": "Ngns20002@",
+      "role": "user",
+      "isLoggedIn": true,
+      "id": 2
+    },
+    {
+      "user": "ngns",
+      "email": "sondzk58@gmail.com",
+      "name": "burh",
+      "phone": "1234567890",
+      "local": "thái nguyên ",
+      "pass": "Son110702@",
+      "confirmPass": "Son110702@",
+      "role": "user",
+      "isLoggedIn": true,
+      "id": 3
+    }
+  ],
+  "book": [
+    {
+      "id": 1,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": "$20.000",
+      "publication_year": 1960,
+      "description": "A classic novel depicting racial injustice in the American South.",
+      "cover_image": "http://books.google.com/books/content?id=mFT_CgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "quantity": 100,
+      "product_code": "BK001"
+    },
+    {
+      "id": 2,
+      "title": "totalitarian society",
+      "author": "George Orwell",
+      "price": "$25.000",
+      "publication_year": 1949,
+      "description": "A dystopian novel portraying a totalitarian society.",
+      "cover_image": "http://books.google.com/books/content?id=Y7JQD8Ihox4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "quantity": 100,
+      "product_code": "BK002"
+    },
+    {
+      "id": 3,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "price": "$22.000",
+      "publication_year": 1813,
+      "description": "A classic novel exploring themes of love, marriage, and social norms.",
+      "cover_image": "http://books.google.com/books/content?id=frL0EpijeEMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "quantity": 100,
+      "product_code": "BK003"
+    },
+    {
+      "id": 4,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "price": "$40.000",
+      "publication_year": 1925,
+      "description": "A tale of the American Dream, wealth, and love during the Roaring Twenties.",
+      "cover_image": "http://books.google.com/books/content?id=EVePnEaV368C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "quantity": 100,
+      "product_code": "BK004"
+    },
+    {
+      "id": 5,
+      "title": "Moby-Dick",
+      "author": "Herman Melville",
+      "price": "$31.000",
+      "publication_year": 1851,
+      "description": "The epic tale of Captain Ahab's obsession with the white whale.",
+      "cover_image": "http://books.google.com/books/content?id=_3qBmwzKKf4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "quantity": 100,
+      "product_code": "BK005"
+    },
+    {
+      "id": 6,
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "price": "$18.000",
+      "publication_year": 1954,
+      "description": "An epic fantasy saga about the quest to destroy the One Ring.",
+      "cover_image": "http://books.google.com/books/content?id=HXIz79U7TNQC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "quantity": 100,
+      "product_code": "BK006"
+    },
+    {
+      "id": 7,
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "price": "$55.000",
+      "publication_year": 1951,
+      "description": "A classic coming-of-age novel following Holden Caulfield's journey.",
+      "cover_image": "http://books.google.com/books/content?id=WmzgAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "quantity": 100,
+      "product_code": "BK007"
+    },
+    {
+      "id": 8,
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "price": "$40.000",
+      "publication_year": 1937,
+      "description": "The prequel to The Lord of the Rings, following Bilbo Baggins' journey.",
+      "cover_image": "http://books.google.com/books/content?id=SNAjMMp3H5UC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "quantity": 100,
+      "product_code": "BK008"
+    },
+    {
+      "id": 9,
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel Garcia Marquez",
+      "price": "$20.000",
+      "publication_year": 1967,
+      "description": "A multi-generational saga of the Buendía family in the fictional town of Macondo.",
+      "cover_image": "http://books.google.com/books/content?id=LD9tCQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "quantity": 100,
+      "product_code": "BK009"
+    },
+    {
+      "id": 10,
+      "title": "War and Peace",
+      "author": "Leo Tolstoy",
+      "price": "$10.000",
+      "publication_year": 1869,
+      "description": "A monumental work depicting the events of Russian society during the Napoleonic era.",
+      "cover_image": "http://books.google.com/books/content?id=77RZAAAAYAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      "quantity": 100,
+      "product_code": "BK010"
+    },
+    {
+      "id": 11,
+      "title": "The Odyssey",
+      "author": "Homer",
+      "price": "$28.000",
+      "publication_year": "8th century BCE",
+      "description": "An ancient Greek epic poem recounting Odysseus' ten-year journey home after the Trojan War.",
+      "cover_image": "https://books.google.com.vn/books/content?id=HnfbAAAAMAAJ&printsec=frontcover&img=1&zoom=1&h=160&stbn=1",
+      "quantity": 100,
+      "product_code": "BK011"
+    },
+    {
+      "id": 12,
+      "title": "The Divine Comedy",
+      "author": "Dante Alighieri",
+      "price": "$51.000",
+      "publication_year": "1320",
+      "description": "An epic poem that follows the journey of the soul through Hell, Purgatory, and Heaven.",
+      "cover_image": "https://books.google.com.vn/books/content?id=5DnbAAAAMAAJ&printsec=frontcover&img=1&zoom=1&h=160&stbn=1",
+      "quantity": 100,
+      "product_code": "BK012"
+    },
+    {
+      "id": 13,
+      "title": "The Brothers Karamazov",
+      "author": "Fyodor Dostoevsky",
+      "price": "$13.000",
+      "publication_year": 1880,
+      "description": "A complex novel exploring themes of spirituality, morality, and human nature.",
+      "cover_image": "https://books.google.com.vn/books/content?id=oMerDAAAQBAJ&printsec=frontcover&img=1&zoom=1&h=160&stbn=1",
+      "quantity": 100,
+      "product_code": "BK013"
+    },
+    {
+      "id": 14,
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "price": "$20.000",
+      "publication_year": 1866,
+      "description": "A psychological thriller revolving around guilt, conscience, and redemption.",
+      "cover_image": "https://books.google.com.vn/books/publisher/content?id=WX6rDAAAQBAJ&printsec=frontcover&img=1&zoom=1&h=160&stbn=1",
+      "quantity": 100,
+      "product_code": "BK014"
+    },
+    {
+      "id": 15,
+      "title": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde",
+      "price": "$42.000",
+      "publication_year": 1890,
+      "description": "A novel about a man whose portrait ages while he retains his youth and beauty.",
+      "cover_image": "https://books.google.com.vn/books/publisher/content?id=jairDAAAQBAJ&printsec=frontcover&img=1&zoom=1&h=160&stbn=1",
+      "quantity": 100,
+      "product_code": "BK015"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+.detail-image{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+.detail-bth{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 90px;
+}

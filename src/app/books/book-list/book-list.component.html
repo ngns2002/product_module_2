@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+      <ng-container *ngFor="let item of booklist">
+        <div class="card-ui col-md-4" routerLink="/detail/{{item.id}}">
+          <img [src]="item.cover_image" alt="Book Image"> 
+          <h5>{{ item.title }}</h5>
+          <p>Author: {{ item.author }}</p>
+          <p>Publication Year: {{ item.publication_year }}</p>
+          <p>Genre: {{ item.price}}<strong>VNĐ</strong></p>
+          <p class="description">Description: {{ item.description }}</p>
+          <p>Quantity: {{ item.quantity }}</p>
+          <p>Product Code: {{ item.product_code }}</p>
+          <button class="btn btn-primary" routerLink="/book-detail">
+            view now
+          </button>
+        </div>
+      </ng-container>
+    </div>
+  </div>

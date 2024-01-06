@@ -1,0 +1,50 @@
+<div class="login-form">
+    <form  [formGroup]="registerForm" (ngSubmit)="RegisTer()">
+      <h1>Register</h1>
+      
+      <div class="form-group">
+        <input formControlName="user" type="text"  placeholder="User">
+        <span class="input-icon"><i class="fa fa-user"></i></span>
+      </div>
+      <div *ngIf="registerForm.controls.user.invalid && registerForm.controls.user.touched" class="error-message">
+        User is 3 and 20 characters without special characters.
+      </div>
+      <div class="form-group">
+        <input formControlName="email" type="email" placeholder="E-mail Address">
+        <span class="input-icon"><i class="fa fa-envelope"></i></span>
+      </div>
+      <div *ngIf="registerForm.controls.email.invalid && registerForm.controls.email.touched" class="error-message">
+        gmail is not in correct format
+      </div>
+      <div class="form-group">
+        <input formControlName="name" type="name" placeholder="name">
+        <span class="input-icon"><i class="fa-regular fa-id-card"></i></span>
+      </div>
+      <div class="form-group">
+        <input formControlName="local" type="local" placeholder="localtion">
+        <span class="input-icon"><i class="fa-solid fa-map-location-dot"></i></span>
+      </div>
+      <div class="form-group">
+        <input formControlName="phone" type="phone" placeholder="Phone">
+        <span class="input-icon"><i class="fa-solid fa-phone-volume"></i></span>
+      </div>
+      <div *ngIf="registerForm.controls.phone.invalid && registerForm.controls.phone.touched" class="error-message">
+        Minimum 10 numbers
+      </div>
+      <div class="form-group">
+        <input formControlName="pass" type="password" name="psw" placeholder="Password">
+        <span class="input-icon"><i class="fa fa-lock"></i></span>
+      </div>  
+      <div *ngIf="registerForm.controls.pass.invalid && registerForm.controls.pass.touched" class="error-message">
+        Password must be from 8 to 32 characters, must contain at least one letter, one number and one special character.
+      </div>
+      <div class="form-group">
+        <input formControlName="confirmPass" type="password" name="psw" placeholder="Comfirm Password">
+        <span class="input-icon"><i class="fa fa-lock"></i></span>
+      </div>
+      <button class="login-btn">register</button>      
+      <a class="reset-psw" href="#">Do you already have an account?</a>
+      <a class="f-login" routerLink="/login">Login Now</a>
+      <a class="f-home" routerLink="/">Back to Home </a>
+    </form>
+  </div>

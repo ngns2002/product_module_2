@@ -1,0 +1,69 @@
+/* .container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+   */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  
+  .card-ui {
+    top: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    margin: 15px;
+    overflow: hidden;
+    position: relative;
+    width: calc(33.333% - 30px);
+    cursor: pointer;
+  }
+  
+  .card-ui img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .card-ui h5 {
+    color: #333;
+    font-size: 24px;
+    margin: 0;
+    padding: 15px;
+  }
+  
+  .card-ui p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 15px;
+  }
+  
+  .card-ui .btn {
+    border: none;
+    bottom: -12px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    left: 71%;
+    padding: 10px 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  .book-icon {
+    position: absolute;
+    left: 49%;
+    bottom: -10px;
+    font-size: 25px;
+    transform: translate(-50%, -50%);
+    color: #000;
+  }
+.description{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 600px;
+}

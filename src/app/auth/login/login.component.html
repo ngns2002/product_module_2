@@ -1,0 +1,31 @@
+<div class="login-form">
+  <form  [formGroup]="loginFrom" (ngSubmit)="logincup()">
+    <h1>Login</h1>
+    <div class="form-group">
+      <input formControlName="user" type="text" placeholder="User">
+      <span class="input-icon"><i class="fa fa-user"></i></span>
+    </div>
+    <div *ngIf="loginFrom.controls.user.invalid && loginFrom.controls.user.touched" class="error-message">
+      This box cannot be left blank
+    </div>
+    <div class="form-group">
+      <input formControlName="pass" type="password" placeholder="Password">
+      <span class="input-icon"><i class="fa fa-lock"></i></span>
+    </div>   
+    <div *ngIf="loginFrom.controls.pass.invalid && loginFrom.controls.pass.touched" class="error-message">
+      This box cannot be left blank
+    </div>   
+    <button class="login-btn">Login</button>  
+       
+    <a class="reset-psw" href="#">Forgot your password?</a>
+     <a class="lg-register" routerLink="/register">register</a>
+    <div class="seperator"><b>or</b></div>
+    <p>Sign in with your social media account</p>
+    <!-- Social login buttons -->
+    <div class="social-icon">
+      <button type="button"><i class="fa-brands fa-facebook"></i></button>
+      <button type="button"><i class="fa-brands fa-google"></i></button>
+    </div>
+  </form>
+
+</div>

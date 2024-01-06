@@ -1,0 +1,113 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border: none;
+    margin-left: 15px;
+  }
+  .dropdown-btn{
+    border: none;
+    background: transparent;
+  }
+  .dropdown-btnn2{
+    border: none;
+    background: transparent;
+  }
+  .dropdown-content {
+    display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 137px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 24px 18px;
+      margin-left: 7px;
+      z-index: 1;
+  }
+  .dropdown-content a{
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+    font-weight: 600;
+    padding:10px ;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form .btn {
+    margin-right: 10px; /* Khoảng cách giữa các nút */
+  }
+  .fa-solid  {
+    font-size: 25px;
+    margin-top: 9px;
+    color: rgb(255 193 7);
+  }
+  .btn-logouts{
+    border: none;
+    color: #000;
+    font-size: 17px;
+    font-weight: 600;
+    padding:10px ;
+  }
+  .quantity{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    padding: 3px;
+    background-color: red;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 22px;
+    height: 28px;
+    margin-top: -10px;
+    font-weight: 600;
+  }
+  .dropdown-toggle {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+  }
+  
+  .dropdown-toggle:hover {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #fff;
+  }
+  
+  .dropdown-menu {
+    background-color: #343a40;
+    border-color: #fff;
+  }
+  
+  .dropdown-item {
+    color: #fff;
+  }
+  
+  .dropdown-item:hover {
+    color: #343a40;
+    background-color: #fff;
+  }
+.header-login{
+  display: contents;
+}  
+.userclass{
+  margin-top: 8px;
+    font-size: 25px;
+    color: rgb(255 193 7);
+}
+.extension{
+  padding-left: 15px;
+}
+.input-group {
+  padding-left: 35px;
+}
+.btn-login,
+.btn-register{
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px #707070;
+  font-weight: 600;
+}
+.btn-register{
+  background-color:rgb(255 193 7);
+  color: #000;
+}
