@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import * as CryptoJS from 'crypto-js';
 import { AuthService } from '../auth.service';
+import { IUser } from '../shared/models/user';
 
 @Component({
     selector: 'app-login',
@@ -56,8 +57,8 @@ export class loginComponent implements OnInit {
           }
         });
       } else {
-        this.authService.getUsers().subscribe((res: any[]) => {
-    const user = res.find((a:any)=>{
+        this.authService.getUsers().subscribe((res: IUser[]) => {
+    const user = res.find((a:IUser)=>{
       return a.user === this.loginFrom.value.user && a.pass === this.loginFrom.value.pass 
     })
     if(user){

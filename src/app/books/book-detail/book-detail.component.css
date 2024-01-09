@@ -10,3 +10,12 @@
     font-weight: 700;
     padding-left: 90px;
 }
+.px-3 {
+    height: 37px;
+}
+#form1{
+    width: 55px;
+}
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}

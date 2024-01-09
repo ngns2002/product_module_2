@@ -31,7 +31,7 @@ export class AuthService {
   registerUser(user: IUser): Observable<IUser[]> {
     return this.http.post<IUser[]>(this.apiUrl, user);
   }
-   getUsers(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+   getUsers(): Observable<IUser[]> {
+    return this.http.get<IUser[]>(this.apiUrl);
   }
 }
