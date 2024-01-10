@@ -21,19 +21,20 @@ export class CartService {
     Addtocart(product:any){
         this.Cartdata.push(product);
         this.productlist.next(this.Cartdata);
-        this.GetTotalAmout();
+        this.calculateGrandTotal();
         console.log(this.Cartdata);
     }
     // get total amout 
-    GetTotalAmout():number{
+    calculateGrandTotal() {
         let grandTotal = 0;
-        this.Cartdata.map((a:any)=>{
-            if(a && typeof a.total === 'number'){
-                grandTotal += a.total;
-            }
-        })
+        // Giả sử bạn có một mảng các sản phẩm trong giỏ hàng
+        this.Cartdata.forEach((item) => {
+          grandTotal += item.price * item.quantity_oder; // Giả sử mỗi mục có giá và số lượng
+        });
         return grandTotal;
-    }
+      }
+      
+      
     // remove product to cart
     RemoveCart(product:any){
     this.Cartdata.map((a:any, index:any)=>{

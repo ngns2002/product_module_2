@@ -26,13 +26,13 @@ export class bookdetailComponent implements OnInit {
                 this.book = res;
                 this.productList = res;
                 this.productList.forEach((a: any) => {
-                    Object.assign(a, { quantity: 1, total: a.price });
+                Object.assign(a, { quantity: 1, total: a.price });
                 });
             })
         }
     }
     Addtocart(book: any) {
-        book.quantity_oder = this.quantity_oder; 
+        book.quantity_oder = this.quantity_oder;
         this.CartAPI.Addtocart(book);
     }
 }

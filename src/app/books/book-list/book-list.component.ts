@@ -15,9 +15,12 @@ export class booklistComponent implements OnInit {
     constructor(private api: ApiService, private auth: AuthService) { }
 
     ngOnInit(): void {
-        this.api.getbook().subscribe((res: any) => {
-            console.log(res);
+        this.HandleGetBook();
+        this.api.books.subscribe((res: any) => {
             this.booklist = res;
         });
+    }
+    HandleGetBook() :void {
+        this.api.getbook();
     }
 }

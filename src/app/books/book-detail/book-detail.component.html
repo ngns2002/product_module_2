@@ -2,7 +2,7 @@
   <a class="detail-bth" routerLink="/"
     ><i class="fa-regular fa-hand-point-left"></i> Back to home</a
   >
-  <ng-container *ngFor="let item of book"></ng-container>
+  <ng-container *ngFor="let book"></ng-container>
   <div *ngIf="book" class="container px-4 px-lg-5 my-5">
     <div class="row gx-4 gx-lg-5 align-items-center">
       <div class="col-md-6">
@@ -33,6 +33,7 @@
             <input [(ngModel)]="quantity_oder" type="number" value="1" min="1" max="999">
             <label _ngcontent-mxx-c55="" for="form1" class="form-label"></label>
         </div>
+        
           <!-- <button
             _ngcontent-mxx-c55=""
             onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
