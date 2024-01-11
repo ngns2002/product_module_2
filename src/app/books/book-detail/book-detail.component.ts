@@ -1,9 +1,8 @@
+// book detail ts 
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../books.service';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from 'src/app/cart/Cart.service';
-import { BehaviorSubject } from 'rxjs';
-import Swal from 'sweetalert2';
 
 @Component({
     selector: 'book-detail-app',
@@ -26,7 +25,7 @@ export class bookdetailComponent implements OnInit {
                 this.book = res;
                 this.productList = res;
                 this.productList.forEach((a: any) => {
-                Object.assign(a, { quantity: 1, total: a.price });
+                Object.assign(a,{quantity:1,total:a.price});
                 });
             })
         }
@@ -34,5 +33,5 @@ export class bookdetailComponent implements OnInit {
     Addtocart(book: any) {
         book.quantity_oder = this.quantity_oder;
         this.CartAPI.Addtocart(book);
-    }
+    }    
 }

@@ -1,3 +1,4 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
@@ -18,23 +19,24 @@ export class CartService {
     }
     
     // add to cart detail
-    Addtocart(product:any){
+    Addtocart(product: any) {
         this.Cartdata.push(product);
         this.productlist.next(this.Cartdata);
-        this.calculateGrandTotal();
-        console.log(this.Cartdata);
-    }
-    // get total amout 
-    calculateGrandTotal() {
+        this.getTotalPrice();
+        console.log("Cartdata:", this.Cartdata);
+    }    
+    getTotalPrice(): number {
         let grandTotal = 0;
-        // Giả sử bạn có một mảng các sản phẩm trong giỏ hàng
-        this.Cartdata.forEach((item) => {
-          grandTotal += item.price * item.quantity_oder; // Giả sử mỗi mục có giá và số lượng
+        this.Cartdata.forEach((item: any) => {
+            // console.log("Item:", item);
+            const price = parseFloat(item.price.replace('.', '').replace(',', '.'));
+            if (!isNaN(price) && item.quantity_oder) {
+                grandTotal += price * item.quantity_oder;
+            }
         });
+        // console.log("Tổng giá trị:", grandTotal);
         return grandTotal;
-      }
-      
-      
+    } 
     // remove product to cart
     RemoveCart(product:any){
     this.Cartdata.map((a:any, index:any)=>{

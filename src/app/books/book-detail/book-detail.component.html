@@ -16,31 +16,15 @@
         <div class="small mb-1">Book Code: {{ book.product_code }}</div>
         <h1 class="display-5 fw-bolder">{{ book.title }}</h1>
         <div class="fs-5 mb-5">
-          <span> {{ book.price }}<strong>VNĐ</strong></span>
+          <span> {{ book.price}}<strong>VNĐ</strong></span>
         </div>
         <p class="lead">{{ book.description }}</p>
         <p>Quantity: {{ book.quantity }}</p>
-
         <div _ngcontent-mxx-c55="" class="d-flex mb-4" style="max-width: 300px">
-          <!-- <button
-            _ngcontent-mxx-c55=""
-            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-            class="btn btn-primary px-3 me-2"
-          >
-            <i _ngcontent-mxx-c55="" class="fas fa-minus"></i>
-          </button> -->
           <div _ngcontent-mxx-c55="" class="form-outline">
             <input [(ngModel)]="quantity_oder" type="number" value="1" min="1" max="999">
             <label _ngcontent-mxx-c55="" for="form1" class="form-label"></label>
         </div>
-        
-          <!-- <button
-            _ngcontent-mxx-c55=""
-            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-            class="btn btn-primary px-3 ms-2"
-          >
-            <i _ngcontent-mxx-c55="" class="fas fa-plus"></i>
-          </button> -->
         </div>
         <button class="btn btn-outline-dark flex-shrink-0" type="button" (click)=Addtocart(book)>
           <i class="bi-cart-fill me-1"></i>
