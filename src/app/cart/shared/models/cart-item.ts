@@ -1,4 +1,4 @@
-export interface Icart {
+export interface ICart {
     id:number;
     title:string;
     price:string;

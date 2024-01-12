@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../books.service';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from 'src/app/cart/Cart.service';
+import { HttpClient } from '@angular/common/http';
+import { ICart } from 'src/app/cart/shared/models/cart-item';
 
 @Component({
     selector: 'book-detail-app',
@@ -15,7 +17,7 @@ export class bookdetailComponent implements OnInit {
     productList: any;
     quantity_oder: number = 1;
 
-    constructor(private api: ApiService, private route: ActivatedRoute, private CartAPI: CartService) { }
+    constructor(private http:HttpClient ,private api: ApiService, private route: ActivatedRoute, private CartAPI: CartService) { }
 
     ngOnInit(): void {
         const id = this.route.snapshot.paramMap.get('id');
@@ -30,8 +32,20 @@ export class bookdetailComponent implements OnInit {
             })
         }
     }
+    
     Addtocart(book: any) {
-        book.quantity_oder = this.quantity_oder;
-        this.CartAPI.Addtocart(book);
+        const bookToCart: ICart = {
+            id: book.id,
+            title: book.title,
+            price: book.price,
+            quantity: book.quantity.toString(),
+            cover_image: book.cover_image,
+            product_code: book.product_code,
+            quantity_oder: this.quantity_oder.toString()
+        };
+        this.CartAPI.Addproduct(bookToCart).subscribe((res) => {
+        console.log(res);
+        this.CartAPI.loadCartData();
+  });
     }    
 }

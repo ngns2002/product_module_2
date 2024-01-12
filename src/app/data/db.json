@@ -204,15 +204,15 @@
       "product_code": "BK015"
     }
   ],
-  "cart" : [
+  "cart": [
     {
-      "id": 1,
-      "title": 1,
-      "price": 1,
-      "quantity": 1,
-      "cover_image": 1,
-      "product_code": 1,
-      "quantity_oder": 1
+      "id": 2,
+      "title": "totalitarian society",
+      "price": " 25.000",
+      "quantity": "100",
+      "cover_image": "http://books.google.com/books/content?id=Y7JQD8Ihox4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "product_code": "BK002",
+      "quantity_oder": "3"
     }
   ]
 }
