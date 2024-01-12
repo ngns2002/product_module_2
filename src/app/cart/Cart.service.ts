@@ -8,6 +8,7 @@ export class CartService {
   Cartdata: any[] = [];
   productlist = new BehaviorSubject<any>([]);
   private data = 'http://localhost:3000/cart';
+  
   constructor(private http: HttpClient) {
     this.loadCartData();
   }
@@ -34,6 +35,7 @@ export class CartService {
   Addproduct(cart: ICart): Observable<ICart[]> {
     return this.http.post<ICart[]>(this.data, cart);
   }
+
   // add to cart detail
   Addtocart(product: any) {
     this.Cartdata.push(product);
@@ -51,7 +53,6 @@ export class CartService {
     // console.log("Tổng giá trị:", grandTotal);
     return grandTotal;
   }
-  // remove product to cart
   // remove product from cart and db.json
   RemoveCart(product: any) {
     this.http.delete(`${this.data}/${product.id}`).subscribe((res) => {

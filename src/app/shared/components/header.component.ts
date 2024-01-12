@@ -12,9 +12,7 @@ export class headerComponent implements OnInit {
   [x: string]: any;
   isLoggedIn = false;
   public totalItem : number = 0;
-
   constructor(private authService: AuthService, private APIcart: CartService) {}
-
   ngOnInit(): void {
     this.authService.isLoggedIn.subscribe((loggedIn) => {
       this.isLoggedIn = loggedIn;

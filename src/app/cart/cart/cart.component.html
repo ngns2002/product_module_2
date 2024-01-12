@@ -5,7 +5,8 @@
       <div class="col-md-8">
         <div *ngFor="let item of product ; let i = index" class="card mb-4">
           <div class="card-header py-3">
-            <h5 class="mb-0">Cart - {{i + 1}} items</h5>
+          
+            <input class="checkbox" type="checkbox" name="add" id="add"><h5 class="mb-0">Cart - {{i + 1}} items</h5>
           </div>
           <div class="card-body">
             <!-- Single item -->
@@ -61,7 +62,7 @@
                 </div>
                 </div>
                 <p class="text-start text-md-center">
-                  <strong>{{item.price}}</strong>
+                  <strong>{{item.price}} <strong>VNĐ</strong></strong>
                 </p>
               </div>
             </div>
