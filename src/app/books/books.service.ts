@@ -30,9 +30,7 @@ export class ApiService {
     return this._books.asObservable();
   }
 
-  set books(books: Observable<IBook[]>){
-    books.subscribe(books => {
-      this._books.next(books);
-    });
+  updateBooks(books: IBook[]){
+    this._books.next(books);
   }
 }

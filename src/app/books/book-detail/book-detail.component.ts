@@ -32,11 +32,15 @@ export class bookdetailComponent implements OnInit {
             })
         }
     }
+
     Addtocart(book: any) {
         const existingCartItem = this.CartAPI.findCartItemById(book.id);
-
         if (existingCartItem) {
             existingCartItem.quantity_oder = Number(existingCartItem.quantity_oder) + this.quantity_oder;
+            this.CartAPI.UpdateCartItem(existingCartItem).subscribe((res) => {
+                console.log(res);
+                this.CartAPI.loadCartData();
+            });
         } else {
             const bookToCart: ICart = {
                 id: book.id,
@@ -45,12 +49,12 @@ export class bookdetailComponent implements OnInit {
                 quantity: book.quantity.toString(),
                 cover_image: book.cover_image,
                 product_code: book.product_code,
-                quantity_oder: this.quantity_oder
+                quantity_oder: this.quantity_oder,
+                isuer: book.user,
             };
             this.CartAPI.Addproduct(bookToCart).subscribe((res) => {
                 console.log(res);
                 this.CartAPI.loadCartData();
-                
             });
         }
     }

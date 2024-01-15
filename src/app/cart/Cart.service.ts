@@ -8,14 +8,12 @@ export class CartService {
   Cartdata: any[] = [];
   productlist = new BehaviorSubject<any>([]);
   private data = 'http://localhost:3000/cart';
-  
   constructor(private http: HttpClient) {
     this.loadCartData();
   }
   findCartItemById(productId: string): any {
     return this.Cartdata.find((item) => item.id === productId);
   }
-
   loadCartData() {
     this.http.get<any[]>(this.data).subscribe((res) => {
       this.Cartdata = res;
@@ -35,7 +33,6 @@ export class CartService {
   Addproduct(cart: ICart): Observable<ICart[]> {
     return this.http.post<ICart[]>(this.data, cart);
   }
-
   // add to cart detail
   Addtocart(product: any) {
     this.Cartdata.push(product);
@@ -46,11 +43,9 @@ export class CartService {
   getTotalPrice(): number {
     let grandTotal = 0;
     this.Cartdata.forEach((item: any) => {
-      // console.log("Item:", item);
       const price = parseFloat(item.price.replace('.', '').replace(',', '.'));
       grandTotal += price * item.quantity_oder;
     });
-    // console.log("Tổng giá trị:", grandTotal);
     return grandTotal;
   }
   // remove product from cart and db.json
@@ -65,8 +60,13 @@ export class CartService {
     });
   }
   // remove all data to cart
-  Removealldata() {
+  Removealdata() {
     this.Cartdata = [];
     this.productlist.next(this.Cartdata);
+  }
+  // update data when add
+  UpdateCartItem(cartItem: ICart): Observable<ICart> {
+    const url = `${this.data}/${cartItem.id}`;
+    return this.http.put<ICart>(url, cartItem);
   }
 }

@@ -209,10 +209,10 @@
       "id": 2,
       "title": "totalitarian society",
       "price": " 25.000",
-      "quantity": "10044444",
+      "quantity": "100",
       "cover_image": "http://books.google.com/books/content?id=Y7JQD8Ihox4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       "product_code": "BK002",
-      "quantity_oder": "3"
+      "quantity_oder": 6
     },
     {
       "id": 3,

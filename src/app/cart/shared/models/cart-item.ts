@@ -5,5 +5,6 @@ export interface ICart {
     quantity:string;
     cover_image:string;
     product_code:string;
-    quantity_oder:number
+    quantity_oder:number;
+    isuer:string;
 }
