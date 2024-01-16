@@ -41,44 +41,46 @@ export class CartComponent implements OnInit {
     this.APIcart.Removealdata();
     this.updateGrandTotal();
   }
-
+  toggleSelection(item: any) {
+    item.selected = !item.selected;
+  }
   // add to check out 
   addToCheckout() {
     const itemsToAddToCheckout = this.product.filter((item: any) => item.selected);
-    if (itemsToAddToCheckout.length === 0) {
-      const ToastWarning = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        }
-      });
-      ToastWarning.fire({
-        icon: "error",
-        title: "Please choose a product"
-      });
-    } else {
-      const ToastSuccess = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        }
-      });
-      ToastSuccess.fire({
-        icon: "success",
-        title: "add products to checkout successfully"
-      });
-      console.log("sản phẩm oder", itemsToAddToCheckout);
-      this.router.navigate(['/checkout'])
-    }
+    // if (itemsToAddToCheckout.length === 0) {
+    //   const ToastWarning = Swal.mixin({
+    //     toast: true,
+    //     position: "top-end",
+    //     showConfirmButton: false,
+    //     timer: 3000,
+    //     timerProgressBar: true,
+    //     didOpen: (toast) => {
+    //       toast.onmouseenter = Swal.stopTimer;
+    //       toast.onmouseleave = Swal.resumeTimer;
+    //     }
+    //   });
+    //   ToastWarning.fire({
+    //     icon: "error",
+    //     title: "Please choose a product"
+    //   });
+    // } else {
+    //   const ToastSuccess = Swal.mixin({
+    //     toast: true,
+    //     position: "top-end",
+    //     showConfirmButton: false,
+    //     timer: 3000,
+    //     timerProgressBar: true,
+    //     didOpen: (toast) => {
+    //       toast.onmouseenter = Swal.stopTimer;
+    //       toast.onmouseleave = Swal.resumeTimer;
+    //     }
+    //   });
+    //   ToastSuccess.fire({
+    //     icon: "success",
+    //     title: "add products to checkout successfully"
+    //   });
+    //   console.log("Sản phẩm order", itemsToAddToCheckout);
+    //   this.APIcart.addToCheckout(itemsToAddToCheckout);
+    this.router.navigate(['/checkout']);
   }
 }

@@ -4,14 +4,15 @@ import { CommonModule } from '@angular/common';
 import { CartComponent } from './cart/cart.component';
 import { checkoutComponent } from './checkout/checkout.component';
 import { CartRoutingModule } from './cart-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     RouterModule,
     CommonModule,
     CartRoutingModule,
-    FormsModule 
+    ReactiveFormsModule,
+    FormsModule,
   ],
   exports: [
     CartComponent,
@@ -20,8 +21,9 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     CartComponent,
     checkoutComponent
-    
   ],
   providers: [],
 })
-export class CheckoutModule {}
+export class CheckoutModule {
+  public selectedPaymentMethod: string = 'igotnone';
+}

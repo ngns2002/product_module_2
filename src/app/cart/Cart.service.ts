@@ -69,4 +69,11 @@ export class CartService {
     const url = `${this.data}/${cartItem.id}`;
     return this.http.put<ICart>(url, cartItem);
   }
+  // add to checkout 
+  addToCheckout(product :any){
+    this.Cartdata.push(product);
+    this.productlist.next(this.Cartdata);
+    this.getTotalPrice();
+    console.log('Cartdata:', this.Cartdata);
+  }
 }

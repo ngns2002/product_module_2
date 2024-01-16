@@ -206,31 +206,49 @@
   ],
   "cart": [
     {
-      "id": 2,
-      "title": "totalitarian society",
-      "price": " 25.000",
-      "quantity": "100",
-      "cover_image": "http://books.google.com/books/content?id=Y7JQD8Ihox4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "product_code": "BK002",
-      "quantity_oder": 6
-    },
-    {
       "id": 3,
       "title": "Pride and Prejudice",
       "price": " 22.000",
       "quantity": "100",
       "cover_image": "http://books.google.com/books/content?id=frL0EpijeEMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       "product_code": "BK003",
-      "quantity_oder": "3"
-    },
-    {
-      "id": 1,
-      "title": "To Kill a Mockingbird",
-      "price": " 20.000",
-      "quantity": "100",
-      "cover_image": "http://books.google.com/books/content?id=mFT_CgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "product_code": "BK001",
-      "quantity_oder": 3
+      "quantity_oder": 1
     }
+  ],
+  "checkout": [
+    [
+      {
+        "id": 1,
+        "title": "To Kill a Mockingbird",
+        "price": " 20.000",
+        "quantity": "100",
+        "cover_image": "http://books.google.com/books/content?id=mFT_CgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "product_code": "BK001",
+        "quantity_oder": 1,
+        "DataUser": {
+          "firstName": "Ngô Gia ",
+          "lastName": "Nhất Sơn",
+          "phone": "0326225379",
+          "address": "thái nguyên"
+        }
+      }
+    ],
+    [
+      {
+        "id": 1,
+        "title": "To Kill a Mockingbird",
+        "price": " 20.000",
+        "quantity": "100",
+        "cover_image": "http://books.google.com/books/content?id=mFT_CgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "product_code": "BK001",
+        "quantity_oder": 1,
+        "DataUser": {
+          "firstName": "Ngô Gia ",
+          "lastName": "Nhất Sơn",
+          "phone": "0326225379",
+          "address": "thái nguyên"
+        }
+      }
+    ]
   ]
 }

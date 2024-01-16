@@ -25,7 +25,6 @@ export class ApiService {
       })
     );
   }
-
   get books(): Observable<IBook[]>{
     return this._books.asObservable();
   }

@@ -8,11 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { booklistComponent } from './books/book-list/book-list.component';
 import { CheckoutModule } from './cart/cart.module';
 import { BookdModule } from './books/books.module';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     booklistComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

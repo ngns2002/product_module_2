@@ -1,0 +1,26 @@
+.cartdata{
+    border-radius: 50px;
+    color: red;
+    background: darkgray;
+    text-align: center;
+    width: 45px;
+    height: 30px;
+    margin-left: 10px;
+}
+.cart-rowr{
+    display: flex;
+}
+.removedata{
+    height: 35px;
+}
+.error-message{
+    color: red;
+    padding: 12px;
+    font-weight: 600;
+  }
+  .hide {
+    display: none;
+  }
+  p {
+    font-weight: bold;
+  }
