@@ -204,18 +204,23 @@
       "product_code": "BK015"
     }
   ],
-  "cart": [
-    {
-      "id": 3,
-      "title": "Pride and Prejudice",
-      "price": " 22.000",
-      "quantity": "100",
-      "cover_image": "http://books.google.com/books/content?id=frL0EpijeEMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-      "product_code": "BK003",
-      "quantity_oder": 1
-    }
-  ],
+  "cart": [],
   "checkout": [
+    {
+      "id": 1,
+      "title": "interface",
+      "price": 1,
+      "quantity": 1,
+      "cover_image": "interface",
+      "product_code": "P001",
+      "quantity_oder": 1,
+      "DataUser": {
+        "firstName": "interface",
+        "lastName": "interface",
+        "phone": "interface",
+        "address": "interface"
+      }
+    },
     [
       {
         "id": 1,
@@ -224,7 +229,7 @@
         "quantity": "100",
         "cover_image": "http://books.google.com/books/content?id=mFT_CgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "product_code": "BK001",
-        "quantity_oder": 1,
+        "quantity_oder": 2,
         "DataUser": {
           "firstName": "Ngô Gia ",
           "lastName": "Nhất Sơn",
@@ -241,14 +246,15 @@
         "quantity": "100",
         "cover_image": "http://books.google.com/books/content?id=mFT_CgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         "product_code": "BK001",
-        "quantity_oder": 1,
+        "quantity_oder": 2,
         "DataUser": {
           "firstName": "Ngô Gia ",
           "lastName": "Nhất Sơn",
-          "phone": "0326225379",
-          "address": "thái nguyên"
+          "phone": "(207) 231-3315",
+          "address": "thái nguyên cty"
         }
       }
-    ]
+    ],
+    []
   ]
 }

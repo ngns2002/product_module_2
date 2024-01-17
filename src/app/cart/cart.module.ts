@@ -24,6 +24,4 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   providers: [],
 })
-export class CheckoutModule {
-  public selectedPaymentMethod: string = 'igotnone';
-}
+export class CheckoutModule {}

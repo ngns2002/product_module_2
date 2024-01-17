@@ -8,13 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { booklistComponent } from './books/book-list/book-list.component';
 import { CheckoutModule } from './cart/cart.module';
 import { BookdModule } from './books/books.module';
-import { AdminComponent } from './admin/admin.component';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     booklistComponent,
-    AdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +22,8 @@ import { AdminComponent } from './admin/admin.component';
     AuthModule,
     HttpClientModule,
     CheckoutModule,
-    BookdModule
+    BookdModule,
+    AdminModule
   ],
   exports: [
   ],

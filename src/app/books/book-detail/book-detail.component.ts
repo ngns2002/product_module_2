@@ -16,7 +16,7 @@ export class bookdetailComponent implements OnInit {
     book: any = null;
     productList: any;
     quantity_oder: number = 1;
-
+    
     constructor(private http: HttpClient, private api: ApiService, private route: ActivatedRoute, private CartAPI: CartService) { }
 
     ngOnInit(): void {

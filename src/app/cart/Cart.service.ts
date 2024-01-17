@@ -59,6 +59,7 @@ export class CartService {
       this.productlist.next(this.Cartdata);
     });
   }
+  
   // remove all data to cart
   Removealdata() {
     this.Cartdata = [];
