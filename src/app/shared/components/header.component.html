@@ -73,11 +73,9 @@
                                 <button (click)="logout()" class="btn-logout btn-warning">Logout</button>
                             </div>
                         </div>      
-                         <!-- <div *ngIf="isAdmin" class="admin">
-                                  <a >administrators</a>
-                                </div>             -->
+                       
                     </form>    
-                                             
+                           
                     <form class="d-flex">
                         <div class="dropdown">
                             <a class="dropdown-btn"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -86,13 +84,16 @@
                                 <p><a routerLink="/cart">cart</a></p>
                                 <p><a routerLink="/checkout" class="btn-logouts">Checkout</a></p>
                             </div>
-                        </div>            
-                    </form>
-                    <form class="d-flex">
-                        <div class="dropdown">
-                            <a class="dropdown-btn"><i class="extension fa-solid fa-puzzle-piece"></i></a>
-                        </div>            
-                    </form>
+                        </div>  
+                        <form class="d-flex">
+                          <div class="drop-admin" *ngIf="userRole === 'admin'">
+                            <a class="admin" (click)="admin()">Admin</a>
+                          </div>
+                          <div class="drop-admin" *ngIf="userRole !== 'admin'">
+                            <a class="adminus" (click)="admin()">User</a>
+                          </div>
+                      </form>          
+                    </form>  
                 </div>
             </div>
         </ul>

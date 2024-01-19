@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { headerComponent } from './components/header.component';
+import { HeaderComponent } from './components/header.component';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from '../auth/auth.module';
 import { CommonModule } from '@angular/common';
@@ -10,10 +10,10 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ],
   exports: [
-    headerComponent
+    HeaderComponent
   ],
   declarations: [
-    headerComponent
+    HeaderComponent
   ],
   providers: [],
 })

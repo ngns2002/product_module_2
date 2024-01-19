@@ -14,6 +14,7 @@ import { IUser } from '../shared/models/user';
 })
 export class loginComponent implements OnInit {
   [x: string]: any;
+  userRole: string = '';
 
     loginFrom!: FormGroup;
     constructor(
@@ -28,6 +29,7 @@ export class loginComponent implements OnInit {
     
   }
     logincup(){
+
       if (this.loginFrom.invalid) {
         let errorMessage = 'Oh no! There seems to be an error with your input:';
         const formControls = this.loginFrom.controls;
@@ -57,11 +59,14 @@ export class loginComponent implements OnInit {
           }
         });
       } else {
-        this.authService.getUsers().subscribe((res: IUser[]) => {
-    const user = res.find((a:IUser)=>{
+  this.authService.getUsers().subscribe((res: IUser[]) => {
+    
+    const user = res.find((a:IUser) => {
       return a.user === this.loginFrom.value.user && a.pass === this.loginFrom.value.pass 
-    })
-    if(user){
+    });
+
+    if (user) {
+      this.userRole = user.role;
       const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
@@ -73,38 +78,34 @@ export class loginComponent implements OnInit {
           toast.onmouseleave = Swal.resumeTimer;
         }
       });
+
       Toast.fire({
         icon: "success",
         title: "Login success"
       });
-      this.authService.login();
-      const encryptedAuthToken = CryptoJS.AES.encrypt(JSON.stringify(user), 'UbuntuHaha').toString(); // Encrypt user info before saving to localStorage
-      localStorage.setItem('authToken', encryptedAuthToken); // Save encrypted user info to localStorage
+      this.authService.login(this.userRole);
+      const encryptedAuthToken = CryptoJS.AES.encrypt(JSON.stringify(user), 'UbuntuHaha').toString();
+      localStorage.setItem('authToken', encryptedAuthToken);
       this.router.navigate(['']);
       this.loginFrom.reset();
-      // lưu router trước đó muốn truy cập vào
+
       const saveUrl = localStorage.getItem('saveUrl');
       if (saveUrl) {
         this.router.navigate([saveUrl]);
         localStorage.removeItem('saveUrl');
       }
-    }
-      
-    else{
-      Swal.fire({ // Thay alert bằng Swal.fire
+    } else {
+      Swal.fire({
         title: "Your fail",
         text: "The account does not exist in the database",
         icon: "error"
       });
     }
-    },(err:any) => {
-      Swal.fire({
-        title: "Error!",
-        text: "server error! Please Run server",
-        icon: "error"
-      });
-    }
-    )
-  }
- }
-}
+  }, (err: any) => {
+    Swal.fire({
+      title: "Error!",
+      text: "server error! Please Run server",
+      icon: "error"
+    });
+  });
+}}}

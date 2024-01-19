@@ -8,15 +8,14 @@ import { IBook } from './book';
   providedIn: 'root',
 })
 export class ApiService {
-  private _books: BehaviorSubject<IBook[]> = new BehaviorSubject<IBook[]>([]);
-
+  private _book: BehaviorSubject<IBook[]> = new BehaviorSubject<IBook[]>([]);
+    public book$: Observable<IBook[]> = this._book.asObservable();
   constructor(private http: HttpClient) {}
 
   getbook() {
-    return this.http.get<IBook[]>('http://localhost:3000/book')
-      .subscribe((e: IBook[]) =>{
-        this._books.next(e); 
-      });
+    this.http.get<IBook[]>('http://localhost:3000/book').subscribe((book) => {
+      this.books = book;
+  });
   }
   getBookById(id: any) {
     return this.http.get('http://localhost:3000/book/' + id).pipe(
@@ -25,11 +24,10 @@ export class ApiService {
       })
     );
   }
-  get books(): Observable<IBook[]>{
-    return this._books.asObservable();
-  }
-
-  updateBooks(books: IBook[]){
-    this._books.next(books);
-  }
+    get books(): IBook[] {
+        return this._book.getValue();
+    }
+    set books(value: IBook[]) {
+        this._book.next(value);
+    }
 }

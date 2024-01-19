@@ -47,6 +47,9 @@ export class CartComponent implements OnInit {
   // add to check out 
   addToCheckout() {
     const itemsToAddToCheckout = this.product.filter((item: any) => item.selected);
+    console.log(itemsToAddToCheckout);
+    
+    this.router.navigate(['/checkout']);
     // if (itemsToAddToCheckout.length === 0) {
     //   const ToastWarning = Swal.mixin({
     //     toast: true,
@@ -81,6 +84,5 @@ export class CartComponent implements OnInit {
     //   });
     //   console.log("Sản phẩm order", itemsToAddToCheckout);
     //   this.APIcart.addToCheckout(itemsToAddToCheckout);
-    this.router.navigate(['/checkout']);
   }
 }

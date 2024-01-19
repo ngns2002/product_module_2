@@ -16,7 +16,7 @@ export class AppComponent {
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        this.showHeader = !event.urlAfterRedirects.includes('admin');
+        this.showHeader = !(event.urlAfterRedirects.includes('admin') || event.urlAfterRedirects.includes('add'));
       }
     });
   }

@@ -20,6 +20,7 @@ export class bookdetailComponent implements OnInit {
     constructor(private http: HttpClient, private api: ApiService, private route: ActivatedRoute, private CartAPI: CartService) { }
 
     ngOnInit(): void {
+        
         const id = this.route.snapshot.paramMap.get('id');
         if (id !== null) {
             this.api.getBookById(id).subscribe((res) => {
