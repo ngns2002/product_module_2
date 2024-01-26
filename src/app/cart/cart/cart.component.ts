@@ -22,7 +22,6 @@ export class CartComponent implements OnInit {
       this.grandTotalVND = this.formatAsVND(this.grandTotal);
     });
   }
-
   private formatAsVND(value: number): string {
     const formatter = new Intl.NumberFormat('vi-VN', {
       style: 'currency',

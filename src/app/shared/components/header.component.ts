@@ -1,4 +1,3 @@
-// header.component.ts
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
 import { Router } from '@angular/router';
@@ -12,7 +11,7 @@ import { CartService } from 'src/app/cart/Cart.service';
 export class HeaderComponent implements OnInit {
   isLoggedIn = false;
   userRole: string = '';
-  username: any[] = [];
+  userName: string = ''; // Add this line
   res: any;
   public totalItem: number = 0;
 
@@ -22,8 +21,8 @@ export class HeaderComponent implements OnInit {
     this.authService.isLoggedIn.subscribe((loggedIn) => {
       this.isLoggedIn = loggedIn;
       this.authService.userRole$.subscribe((role) => {
-        this.userRole = role; // Cập nhật vai trò của người dùng
-        this.username = loggedIn;
+        this.userRole = role;
+        this.getUserName(); // Add this line
       });
     });
     this.APIcart.getproductdata().subscribe((res: any[]) => {
@@ -42,5 +41,14 @@ export class HeaderComponent implements OnInit {
     } else {
       console.log("You do not have permission to access admin.");
     }
+  }
+
+  getUserName(): void { // Add this method
+    this.authService.getUsers().subscribe((res: any[]) => {
+      const user = res.find((a: any) => a.role === this.userRole);
+      if (user) {
+        this.userName = user.name;
+      }
+    });
   }
 }

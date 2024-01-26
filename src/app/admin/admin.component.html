@@ -6,7 +6,7 @@
     <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
-        <a class="nav-link" routerLink="/">Sign out</a>
+        <a class="nav-link" routerLink="/">Back To Website</a>
       </li>
     </ul>
   </nav>
@@ -46,44 +46,69 @@
           </div>
         </div>
   
-        <canvas class="my-4" id="myChart" width="900" height="380"></canvas>
-  
-        <h2>Section title</h2>
-        <div class="table-responsive">
-          <table class="table table-striped table-sm">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Header</th>
-                <th>Header</th>
-                <th>Header</th>
-                <th>Header</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1,001</td>
-                <td>random</td>
-                <td>data</td>
-                <td>placeholder</td>
-                <td>text</td>
-              </tr>
-              <tr>
-                <td>1,002</td>
-                <td>placeholder</td>
-                <td>irrelevant</td>
-                <td>visual</td>
-                <td>content</td>
-              </tr>
-              <tr>
-                <td>1,003</td>
-                <td>data</td>
-                <td>rich</td>
-                <td>text</td>
-                <td>tables</td>
-              </tr>
-            </tbody>
-          </table>
+        <h2>danh sách thành viên</h2>
+        <div class="table-responsive"> 
+          <div style="overflow-y: auto; height: 100%;">
+            <div class="m-3" *ngFor="let task of taskArr">
+                <div class="p-2 shadow border" id="tasks">
+                    <div class="input-group row ps-3">
+                        <div class="card col-md-10 border-0" > ID:&nbsp;{{task.id}} </div><br>
+                        <div class="card col-md-10 border-0" > User:&nbsp;{{task.user}} </div><br>
+                        <div class="card col-md-10 border-0"> Email:&nbsp;{{task.email}}</div><br>
+                        <div class="card col-md-10 border-0"> name:&nbsp;{{task.name}}</div><br>
+                        <div class="card col-md-10 border-0"> phone:&nbsp;{{task.phone}}</div><br>
+                        <div class="card col-md-10 border-0"> localtion:&nbsp;{{task.local}}</div><br>
+                        <div class="card col-md-10 border-0"> Password:&nbsp;{{task.pass}}</div>
+                        <div class="card col-md-10 border-0"> administration:&nbsp;{{task.role}}</div>
+                        <button class="btn btn-outline-primary col me-2" data-bs-toggle="modal" type="button"
+                            data-bs-target="#exampleModal" (click)="call(task)">
+                            <i class="fa-solid fa-user-pen"></i></button>
+                        <div class="btn btn-outline-danger col" (click)="deleteTask(task)"><i
+                                class="fa-solid fa-person-circle-minus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Edit User</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                            title="edit user"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="task">User:</label>
+                            <br>
+                            <span class="text-danger p-2">cannot be edited</span>
+                            <input type="text" class="form-control" id="task" placeholder="Enter task"
+                                name="task" [(ngModel)]="editTaskValue" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" class="form-control" id="email" placeholder="Enter email"
+                                name="email" [(ngModel)]="editEmailValue">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="text" class="form-control" id="password" placeholder="Enter password"
+                                name="password" [(ngModel)]="editPassValue">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">role:</label>
+                            <input type="text" class="form-control" id="password" placeholder="Role"
+                                name="password" [(ngModel)]="editRoleValue">
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-success" type="button" data-bs-dismiss="modal"
+                                (click)="editTask()">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
       </main>
     </div>

@@ -78,7 +78,6 @@ export class loginComponent implements OnInit {
           toast.onmouseleave = Swal.resumeTimer;
         }
       });
-
       Toast.fire({
         icon: "success",
         title: "Login success"

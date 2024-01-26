@@ -1,40 +1,51 @@
 {
   "user": [
     {
-      "user": "ngns",
-      "email": "sondzk58@gmail.com",
-      "name": "ngns",
-      "phone": "1233456788",
-      "local": "thái nguyên ",
-      "pass": "Ngns2002@",
-      "confirmPass": "Ngns20002@",
-      "role": "user",
-      "isLoggedIn": true,
-      "id": 2
-    },
-    {
-      "user": "ngns",
-      "email": "sondzk58@gmail.com",
-      "name": "burh",
-      "phone": "1234567890",
-      "local": "thái nguyên ",
-      "pass": "Son110702@",
-      "confirmPass": "Son110702@",
-      "role": "user",
-      "isLoggedIn": true,
-      "id": 3
-    },
-    {
       "user": "admin",
       "email": "admin@gmail.com",
       "name": "admin",
       "phone": "0841299712",
       "local": "admin",
-      "pass": "Admin@123",
+      "pass": "Admin@12",
       "confirmPass": "Admin@123",
       "role": "admin",
       "isLoggedIn": true,
       "id": 4
+    },
+    {
+      "user": "admin",
+      "email": "admin@1.com",
+      "name": "admin",
+      "phone": "1234567890",
+      "local": "admin",
+      "pass": "Admin@123",
+      "confirmPass": "Admin@123",
+      "role": "admin",
+      "isLoggedIn": true,
+      "id": 5
+    },
+    {
+      "id": 7,
+      "user": "ngns",
+      "email": "son.pc01@gmail.com",
+      "name": "Ngô Gia Nhất Sơn",
+      "phone": "48172398",
+      "local": "thai nguyen",
+      "pass": "Admin@123",
+      "confirmPass": "",
+      "role": "admin"
+    },
+    {
+      "user": "sonpc",
+      "email": "sond3r3@f.da",
+      "name": "ngo gia nhat son",
+      "phone": "0987654321",
+      "local": "thai nguyen",
+      "pass": "Son@1234",
+      "confirmPass": "Son@1234",
+      "role": "user",
+      "isLoggedIn": true,
+      "id": 8
     }
   ],
   "book": [
@@ -204,7 +215,17 @@
       "product_code": "BK015"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": 2,
+      "title": "totalitarian society",
+      "price": " 25.000",
+      "quantity": "100",
+      "cover_image": "http://books.google.com/books/content?id=Y7JQD8Ihox4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "product_code": "BK002",
+      "quantity_oder": 2
+    }
+  ],
   "checkout": [
     {
       "id": 1,
