@@ -84,3 +84,9 @@ Loại DOM mà Angular triển khai: Angular triển khai loại DOM là Virtual
 
 # Ưu tiên TypeScript hơn JavaScript trong Angular: 
 TypeScript là một bộ JavaScript nâng cao cung cấp tính nhất quán tuyệt vời. Nó rất được khuyến khích sử dụng do khả năng cung cấp đường cú pháp và làm cho cơ sở mã dễ hiểu và dễ bảo trì hơn. Cuối cùng, mã TypeScript biên dịch JavaScript thành cú pháp có thể chạy hiệu quả trong mọi môi trường.
+
+# BehaviorSubject
+là một biến thể của Subject trong Reactive Programming12. Nó có khái niệm về “giá trị hiện tại” (the current value)12. BehaviorSubject lưu trữ lại giá trị mới emit gần nhất12. Khi một Observer mới subscribe vào, BehaviorSubject sẽ emit giá trị đó ngay lập tức cho Observer vừa rồi12. Điều này có nghĩa là, ngay cả khi một Observer subscribe vào sau khi BehaviorSubject đã bắt đầu emit giá trị, Observer đó vẫn sẽ nhận được giá trị mới nhất mà BehaviorSubject đã emit
+
+#Trong lập trình, 
+emit thường được dùng để chỉ việc phát ra một sự kiện hoặc một tín hiệu1. Trong ngữ cảnh của BehaviorSubject trong Reactive Programming, emit có nghĩa là phát ra một giá trị mới
