@@ -25,6 +25,13 @@ export class CartService {
     return this.productlist.asObservable();
   }
   // set product data
+  //   Thêm sản phẩm vào mảng Cartdata: Dòng this.Cartdata.push(...product); sử dụng toán tử spread (...) 
+//   để thêm các phần tử từ mảng product vào mảng Cartdata. Nếu product là một đối tượng (không phải mảng), 
+//   thì nó sẽ được thêm vào Cartdata như một phần tử mới.
+// Cập nhật BehaviorSubject: Dòng this.productlist.next(product); 
+// gọi phương thức next trên BehaviorSubject productlist, 
+// cung cấp product làm giá trị tiếp theo12. Điều này có nghĩa là bất kỳ người đăng ký (subscriber) 
+// nào của productlist sẽ nhận được product như là giá trị tiếp theo.
   setproductdata(product: any) {
     this.Cartdata.push(...product);
     this.productlist.next(product);
@@ -50,7 +57,7 @@ export class CartService {
   }
   // remove product from cart and db.json
   RemoveCart(product: any) {
-    this.http.delete(`${this.data}/${product.id}`).subscribe((res) => {
+    this.http.delete(`${this.data}/${product.id}`).subscribe((res) => { //Template Literal cho phép bạn nhúng các biến hoặc biểu thức vào trong một chuỗi
       this.Cartdata.map((a: any, index: any) => {
         if (product.id === a.id) {
           this.Cartdata.splice(index, 1);

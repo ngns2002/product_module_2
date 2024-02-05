@@ -223,7 +223,16 @@
       "quantity": "100",
       "cover_image": "http://books.google.com/books/content?id=Y7JQD8Ihox4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       "product_code": "BK002",
-      "quantity_oder": 2
+      "quantity_oder": 3
+    },
+    {
+      "id": 1,
+      "title": "To Kill a Mockingbird",
+      "price": " 20.000",
+      "quantity": "100",
+      "cover_image": "http://books.google.com/books/content?id=mFT_CgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+      "product_code": "BK001",
+      "quantity_oder": 4
     }
   ],
   "checkout": [
